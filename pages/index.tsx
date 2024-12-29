@@ -1,114 +1,130 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+"use client"
+import Link from "next/link"
+import { useRouter } from 'next/router';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  
+const index = () => {
 
-export default function Home() {
+  const router = useRouter();
+
+  const handleExplore = () => {
+    router.push('/home');  
+  };
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      
+      
+      {/* Hero Section */}
+      <div className="relative h-screen">
+        <div className="absolute inset-0">
+          <img
+            src="/images/teee.jpg"
+            alt="Architectural Detail"
+            className="w-full h-full object-cover"
+          />
+            <div className="hidden md:flex space-x-6 justify-center font-bold">
+              <Link href="/home" className="hover:text-orange-500">Home</Link>
+              <Link href="/style" className="text-gray-700 hover:text-gray-900">Style</Link>
+              <Link href="/design" className="text-gray-700 hover:text-gray-900">Design</Link>
+              <Link href="/food" className="text-gray-700 hover:text-gray-900">Food</Link>
+              <Link href="/relationships" className="text-gray-700 hover:text-gray-900">Relationships</Link>
+              <Link href="/travel" className="text-gray-700 hover:text-gray-900">Travel</Link>
+              <Link href="/craft" className="text-gray-700 hover:text-gray-900">Craft</Link>
+              <Link href="/subcribe" className="text-gray-700 hover:text-gray-900">Subscribe</Link>
+            </div>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="relative flex flex-col items-center justify-center h-full text-white">
+          <h1 className="text-4xl md:text-6xl font-light tracking-wider mb-4">
+            ROMANTICIZING YOUR LIFE
+          </h1>
+          <button className="mt-8 px-8 py-3 border border-white hover:bg-white hover:text-black transition-colors" onClick={handleExplore}>
+            EXPLORE MORE
+          </button>
+        </div>
+      </div>
+
+      {/* Welcome Section */}
+      <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <div className="relative h-[700px]">
+          <img
+            src="/images/forest.jpg"
+            alt="Elegant Scene"
+            className="w-full h-full object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+        <div className="space-y-6 max-w-lg">
+          <h2 className="text-3xl font-light">Welcome To WAKA BLOGS</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Romanticizing life and embracing slow living can help you find joy in the small, simple moments of everyday life.
+          </p>
+          <button className="px-6 py-2 border border-black hover:bg-black hover:text-white transition-colors" onClick={handleExplore}>
+            EXPLORE MORE
+          </button>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Service Card 1 */}
+          <div className="space-y-4">
+            <img
+              src="/images/one.jpg"
+              alt="Service 1"
+              className="w-full h-64 object-cover"
+            />
+            <div className="text-sm text-gray-500">APRIL 12TH 2024</div>
+            <h3 className="text-xl">CRAFTING</h3>
+            <p className="text-gray-600">
+              Crafting bespoke digital experiences with attention to every detail.
+            </p>
+          </div>
+
+          {/* Service Card 2 */}
+          <div className="bg-gray-50 p-8 flex flex-col justify-center">
+            <h3 className="text-xl mb-4">ENTERTRENUER</h3>
+            <p className="text-gray-600 mb-6">
+              Discover our range of creative services designed to elevate your digital presence.
+            </p>
+            <Link href="/services" className="text-sm uppercase tracking-wider hover:opacity-75">
+              VIEW MORE
+            </Link>
+          </div>
+
+          {/* Service Card 3 */}
+          <div className="space-y-4">
+            <img
+              src="images/tee.jpg"
+              alt="Service 3"
+              className="w-full h-64 object-cover"
+            />
+            <div className="text-sm text-gray-500">FEBRUARY 24TH 2024</div>
+            <h3 className="text-xl">PORTFOLIO</h3>
+            <p className="text-gray-600">
+              Explore our collection of carefully curated projects and collaborations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <div className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-2xl mb-6">ABOUT OUR STUDIO</h2>
+            <p className="text-gray-300 leading-relaxed">
+              We believe in creating spaces that tell stories, evoke emotions, 
+              and transform digital presence into memorable experiences. Our work 
+              combines classical beauty with modern functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  );
+  )
 }
+export default index;
