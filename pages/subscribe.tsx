@@ -11,7 +11,7 @@ const subscribe = () => {
       <div className="w-full max-w-2xl mx-auto p-8 bg-white shadow-lg rounded-lg">
       <div className="text-center mb-8">
         <p className="text-gray-800 text-lg">
-          I don't send out the newsletter very frequently. But when I do, it's pretty rad.
+          I don&apos;t send out the newsletter very frequently. But when I do, it&apos;s pretty rad.
         </p>
       </div>
       

@@ -20,9 +20,11 @@ const Index = () => {
       {/* Hero Section */}
       <div className="relative h-screen">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/teee.jpg"
             alt="Architectural Detail"
+            width={800} 
+            height={600}
             className="w-full h-full object-cover"
           />
           < Navbar />
@@ -51,7 +53,7 @@ const Index = () => {
           />
         </div>
         <div className="space-y-6 max-w-lg">
-          <h2 className="text-3xl font-light">Welcome To WAKA BLOGS</h2>
+          <h2 className="text-3xl font-light">Welcome To ESSIE BLOGS</h2>
           <p className="text-gray-600 leading-relaxed">
             Romanticizing life and embracing slow living can help you find joy in the small, simple moments of everyday life.
           </p>
@@ -109,11 +111,11 @@ const Index = () => {
         </div>
       </div>
 
-      {/* About Section */}
+      {/* Footer Section */}
       <div className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl mb-6">ABOUT OUR STUDIO</h2>
+            <h2 className="text-2xl mb-6">ABOUT US</h2>
             <p className="text-gray-300 leading-relaxed">
               We believe in creating spaces that tell stories, evoke emotions, 
               and transform digital presence into memorable experiences. Our work 

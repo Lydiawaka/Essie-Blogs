@@ -73,7 +73,7 @@ const craft = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl mb-4">THE GIFTING EMPORIUM</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          We've curated a careful selection of the finest gifts to spoil one person or yourself this season. Tis the season to indulge, from silk pyjamas to the perfect NYE accessories, it's time to gift it well.
+          We&apos;ve curated a careful selection of the finest gifts to spoil one person or yourself this season. Tis the season to indulge, from silk pyjamas to the perfect NYE accessories, it&apos;s time to gift it well.
         </p>
       </div>
 
@@ -136,7 +136,7 @@ const craft = () => {
           <div className="bg-white p-8">
             <h2 className="text-2xl mb-4">ALL WRAPPED UP</h2>
             <p className="text-gray-600 mb-6 text-sm">
-              We don't just offer our gift wrapping service - ensure your gifts beautifully wrapped
+              We don&apos;t just offer our gift wrapping service - ensure your gifts beautifully wrapped
             </p>
             <button className="text-gray-800 text-sm border-b border-gray-800">
               SHOP GIFTS
