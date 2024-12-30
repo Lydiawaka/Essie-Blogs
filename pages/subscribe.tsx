@@ -1,24 +1,5 @@
 import Navbar from "./navbar";
-import Link from "next/link"
-// import { useState } from 'react';
 
-// const [formData, setFormData] = useState({
-//     name: '',
-//     email: ''
-//   });
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Handle form submission here
-//     console.log('Form submitted:', formData);
-//   };
-
-//   const handleChange = (e) => {
-//     setFormData({
-//       ...formData,
-//       [e.target.name]: e.target.value
-//     });
-//   };
 
 
 const subscribe = () => {

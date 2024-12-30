@@ -2,6 +2,7 @@
 
 import Navbar from './navbar';
 import Link from "next/link";
+import Image from 'next/image'
 
 const design = () => {
   const navigationLinks = [
@@ -75,9 +76,11 @@ const design = () => {
       <main className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {contentCards.map((card, index) => (
           <div key={index} className="space-y-4">
-            <img
+            <Image
               src={card.image}
               alt={card.title}
+              width={800} 
+              height={600}
               className="w-full h-64 object-cover"
             />
 

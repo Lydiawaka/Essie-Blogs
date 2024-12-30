@@ -1,10 +1,12 @@
 "use client"
 import Link from "next/link"
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import Navbar from "./navbar"
 
 
   
-const index = () => {
+const Index = () => {
 
   const router = useRouter();
 
@@ -23,16 +25,7 @@ const index = () => {
             alt="Architectural Detail"
             className="w-full h-full object-cover"
           />
-            <div className="hidden md:flex space-x-6 justify-center font-bold">
-              <Link href="/home" className="hover:text-orange-500">Home</Link>
-              <Link href="/style" className="text-gray-700 hover:text-gray-900">Style</Link>
-              <Link href="/design" className="text-gray-700 hover:text-gray-900">Design</Link>
-              <Link href="/food" className="text-gray-700 hover:text-gray-900">Food</Link>
-              <Link href="/relationships" className="text-gray-700 hover:text-gray-900">Relationships</Link>
-              <Link href="/travel" className="text-gray-700 hover:text-gray-900">Travel</Link>
-              <Link href="/craft" className="text-gray-700 hover:text-gray-900">Craft</Link>
-              <Link href="/subcribe" className="text-gray-700 hover:text-gray-900">Subscribe</Link>
-            </div>
+          < Navbar />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
         <div className="relative flex flex-col items-center justify-center h-full text-white">
@@ -49,9 +42,11 @@ const index = () => {
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         <div className="relative h-[700px]">
-          <img
+          <Image
             src="/images/forest.jpg"
             alt="Elegant Scene"
+            width={800} 
+            height={600}
             className="w-full h-full object-cover"
           />
         </div>
@@ -71,9 +66,11 @@ const index = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Service Card 1 */}
           <div className="space-y-4">
-            <img
+            <Image
               src="/images/one.jpg"
               alt="Service 1"
+              width={800} 
+              height={600}
               className="w-full h-64 object-cover"
             />
             <div className="text-sm text-gray-500">APRIL 12TH 2024</div>
@@ -96,9 +93,11 @@ const index = () => {
 
           {/* Service Card 3 */}
           <div className="space-y-4">
-            <img
-              src="images/tee.jpg"
+            <Image
+              src="/images/tee.jpg"
               alt="Service 3"
+              width={800} 
+              height={600}
               className="w-full h-64 object-cover"
             />
             <div className="text-sm text-gray-500">FEBRUARY 24TH 2024</div>
@@ -127,4 +126,4 @@ const index = () => {
     </div>
   )
 }
-export default index;
+export default Index;

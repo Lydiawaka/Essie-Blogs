@@ -25,7 +25,7 @@ const navbar = () => {
              {/* Logo */}
              <div className="flex-shrink-0">
               <Link href="/" className="text-2xl font-serif tracking-wider">
-                Waka Blogs
+                Essie Blogs
               </Link>
             </div>
 

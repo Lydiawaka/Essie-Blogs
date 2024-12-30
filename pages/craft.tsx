@@ -1,14 +1,15 @@
 import Navbar from "./navbar";
 import { FaStar } from "react-icons/fa";
+import Image from 'next/image'
 
 const craft = () => {
 
     const categoryCards = [
         {
           id: 1,
-          title: 'SHOP SLEEPWEAR',
-          image: '/images/ering.jpg',
-          alt: 'Sleepwear category'
+          title: "SHOP SLEEPWEAR",
+          image: "/images/ering.jpg",
+          alt: "Sleepwear category"
         },
         {
           id: 2,
@@ -56,9 +57,11 @@ const craft = () => {
         < Navbar />
         {/* Hero Section */}
       <div className="relative mb-12">
-        <img 
+        <Image
           src="/images/one.jpg" 
           alt="Holiday decor"
+          width={800} 
+          height={600}
           className="w-full h-64 object-cover rounded-lg"
         />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-white font-light italic">
@@ -78,9 +81,11 @@ const craft = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {categoryCards.map((card) => (
           <div key={card.id} className="relative">
-            <img
+            <Image
               src={card.image}
               alt={card.alt}
+              width={800} 
+              height={600}
               className="w-full h-64 object-cover rounded-lg"
             />
             <h3 className="text-sm tracking-wider text-center">{card.title}</h3>
@@ -103,9 +108,11 @@ const craft = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stockingFillers.map((item) => (
             <div key={item.id} className="text-center">
-              <img
+              <Image
                 src={item.image}
                 alt={item.name}
+                width={800} 
+                height={600}
                 className="w-full h-48 object-contain mb-4"
               />
               <h4 className="text-sm mb-2">{item.name}</h4>
@@ -118,9 +125,11 @@ const craft = () => {
       {/* All Wrapped Up Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative">
-            <img
+            <Image
               src="/images/bkk.jpg"
               alt="Gift wrapping"
+              width={800} 
+              height={600}
               className="w-full h-64 object-cover rounded-lg"
             />
           </div>
@@ -137,9 +146,11 @@ const craft = () => {
 
         {/* Large Gift Image */}
         <div className="relative">
-          <img
+          <Image
             src="/images/grn.jpg"
             alt="Wrapped gift with bow"
+            width={800} 
+            height={600}
             className="w-full h-96 object-cover rounded-lg"
           />
           <div className="absolute bottom-4 left-4 right-4">
